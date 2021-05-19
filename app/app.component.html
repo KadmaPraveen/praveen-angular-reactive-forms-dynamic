@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-md-8 col-md-offset-2 col-sm-offset-1">
+			<form [formGroup]="SignupForm" (ngSubmit)="onSubmit()">			
+
+         <div class="form-group">
+            <select name="balanceRounding" id="generalBalanceRounding" class="form-control" formControlName="balanceRounding">
+    <option *ngFor="let balRounding of balRoundings" 
+        [ngValue]="balRounding.value">{{balRounding.text}}
+    </option>
+</select>
+          </div>
+        <button class="btn btn-primary" type="submit">Submit</button> 
+      </form>
+    </div>
+  </div>
+</div>
